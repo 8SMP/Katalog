@@ -343,170 +343,89 @@
             <!-- DESKRIPSI AWAL -->
             <div class="deskripsi-awal">
                 <h2>📖 Selamat Datang di Katalog Pendidikan Matematika</h2>
-                <p>Website ini merupakan katalog online yang berisi koleksi skripsi, artikel ilmiah, buku ajar, dan alat peraga dari Program Studi Pendidikan Matematika, FKIP Universitas Jember. Setiap koleksi dilengkapi dengan informasi lokasi penyimpanan di Laboratorium Matematika (LABOMA) dan link akses ke Google Docs untuk melihat daftar lengkap.</p>
-                <p style="margin-top: 15px; font-size: 0.9em;">Total koleksi: 400+ buku, 100+ skripsi, 50+ artikel, dan 20+ alat peraga.</p>
+                <p>Website ini merupakan katalog online yang berisi koleksi skripsi, artikel, buku, dan alat peraga dari Program Studi Pendidikan Matematika, FKIP Universitas Jember. Setiap koleksi dilengkapi dengan informasi singkat dan link akses ke Google Docs untuk melihat daftar lengkap.</p>
+                <p style="margin-top: 15px; font-size: 0.9em;">Total koleksi: 700+ buku, 800+ skripsi, 350+ artikel, dan 150+ alat peraga.</p>
             </div>
 
             <!-- SECTION SKRIPSI -->
             <div id="skripsi" class="section">
                 <div class="deskripsi-section">
                     <h3><i class="fas fa-file-alt"></i> Koleksi Skripsi</h3>
-                    <p>Berikut adalah katalog skripsi mahasiswa Pendidikan Matematika yang telah dikelompokkan berdasarkan kategori penelitian. Setiap skripsi hanya tersedia untuk dibaca di Laboratorium Matematika (LABOMA). Untuk melihat daftar lengkap skripsi, silakan akses Google Sheets melalui tombol di bawah.</p>
+                    <p>Berikut adalah katalog skripsi mahasiswa Pendidikan Matematika yang telah dikelompokkan berdasarkan kategori penelitian. Setiap skripsi hanya tersedia untuk dibaca di Laboratorium Matematika (LABOMA). Untuk melihat daftar lengkap skripsi, silakan akses Google Docs melalui tombol di bawah.</p>
                 </div>
-                
-                <div class="menu-utama">
-                    <button class="btn-menu active" onclick="showSubSection('geomoble')"><i class="fas fa-cube"></i> Geomoble</button>
-                    <button class="btn-menu" onclick="showSubSection('umum-skripsi')"><i class="fas fa-folder"></i> Umum</button>
-                    <button class="btn-menu" onclick="showSubSection('kompustabel-skripsi')"><i class="fas fa-laptop"></i> Kompustabel</button>
-                </div>
-
-                <!-- Geomoble -->
-                <div id="geomoble" class="sub-section active">
-                    <div class="deskripsi-sub">
-                        <h4>📐 Geomoble (Geometri Mobile)</h4>
-                        <p>Kategori ini berisi skripsi yang fokus pada pengembangan media pembelajaran geometri berbasis mobile dan augmented reality. Koleksi lengkap dapat diakses melalui link Google berikut:</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Skripsi Geomoble</h4>
-                                <p style="color: #5f6368;">Total 25 skripsi. Update terakhir 2025.</p>
-                            </div>
-                            <a href="#" class="btn-google btn-sheets" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>Pengembangan Media Geomoble Berbasis Android</h4>
-                            <p><strong>Penulis:</strong> Ahmad Fauzi</p>
-                            <p><strong>Tahun:</strong> 2024</p>
-                            <p><strong>Kode:</strong> SKRIPSI/GM/2024/001</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Kanan Atas</div>
-                            </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>AR untuk Bangun Ruang</h4>
-                            <p><strong>Penulis:</strong> Siti Nurhaliza</p>
-                            <p><strong>Tahun:</strong> 2023</p>
-                            <p><strong>Kode:</strong> SKRIPSI/GM/2023/045</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Kanan Bawah</div>
-                            </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>Geomoble untuk SMP</h4>
-                            <p><strong>Penulis:</strong> Rudi Hermawan</p>
-                            <p><strong>Tahun:</strong> 2024</p>
-                            <p><strong>Kode:</strong> SKRIPSI/GM/2024/089</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Kiri Atas</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Umum Skripsi -->
-                <div id="umum-skripsi" class="sub-section">
-                    <div class="deskripsi-sub">
-                        <h4>📊 Skripsi Umum</h4>
-                        <p>Kategori ini berisi skripsi dengan topik umum pendidikan matematika. Koleksi lengkap dapat diakses melalui link Google berikut:</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Skripsi Umum</h4>
-                                <p style="color: #5f6368;">Total 50+ skripsi. Update terakhir 2025.</p>
-                            </div>
-                            <a href="#" class="btn-google btn-sheets" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>Analisis Kesulitan Belajar Matematika</h4>
-                            <p><strong>Penulis:</strong> Dewi Lestari</p>
-                            <p><strong>Tahun:</strong> 2023</p>
-                            <p><strong>Kode:</strong> SKRIPSI/UM/2023/112</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Kanan Atas</div>
-                            </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>Pengembangan LKS Berbasis PBL</h4>
-                            <p><strong>Penulis:</strong> Bambang Susilo</p>
-                            <p><strong>Tahun:</strong> 2024</p>
-                            <p><strong>Kode:</strong> SKRIPSI/UM/2024/078</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Kiri Bawah</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kompustabel Skripsi -->
-                <div id="kompustabel-skripsi" class="sub-section">
-                    <div class="deskripsi-sub">
-                        <h4>💻 Kompustabel</h4>
-                        <p>Kategori ini berisi skripsi tentang komputer dan software matematika. Koleksi lengkap dapat diakses melalui link Google berikut:</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Skripsi Kompustabel</h4>
-                                <p style="color: #5f6368;">Total 30+ skripsi. Update terakhir 2025.</p>
-                            </div>
-                            <a href="#" class="btn-google btn-sheets" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>GeoGebra untuk Kalkulus</h4>
-                            <p><strong>Penulis:</strong> Maya Sari</p>
-                            <p><strong>Tahun:</strong> 2023</p>
-                            <p><strong>Kode:</strong> SKRIPSI/KOM/2023/034</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Kanan Bawah</div>
-                            </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>SPSS dalam Statistika</h4>
-                            <p><strong>Penulis:</strong> Agus Pratama</p>
-                            <p><strong>Tahun:</strong> 2024</p>
-                            <p><strong>Kode:</strong> SKRIPSI/KOM/2024/056</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Kiri Atas</div>
-                            </div>
-                        </div>
-                    </div>
+<!-- SECTION SKRIPSI -->
+<div id="skripsi" class="section">
+    <div class="deskripsi-section">
+        <h3><i class="fas fa-file-alt"></i> Koleksi Skripsi</h3>
+        <p>Berikut adalah katalog skripsi mahasiswa Pendidikan Matematika. Setiap skripsi hanya tersedia untuk dibaca di Laboratorium Matematika (LABOMA). Klik pada lokasi rak untuk melihat daftar lengkap di Google Docs.</p>
+    </div>
+    
+    <!-- KATALOG SKRIPSI -->
+    <div class="catalog-grid">
+        <!-- Item GEOMOBEL -->
+        <div class="catalog-item">
+            <h4>📐 GEOMOBEL (Geometri Mobile)</h4>
+            <p><strong>Fokus Penelitian:</strong> Pengembangan media pembelajaran geometri berbasis mobile, Augmented Reality, dan teknologi digital untuk meningkatkan pemahaman konsep geometri ruang.</p>
+            <p><strong>Total Skripsi:</strong> 25 skripsi (2019-2025)</p>
+            <p><strong>Kode Koleksi:</strong> SKRIPSI/GM/...</p>
+            <div class="rak-info">
+                <span class="rak-badge-laboma">LABOMA</span>
+                <div class="rak-lokasi">
+                    <a href="https://docs.google.com/spreadsheets/d/1_GEOMOBEL_SKRIPSI_2025/edit?usp=sharing" target="_blank" style="text-decoration: none; color: #4a6cf7; display: flex; align-items: center; gap: 5px;">
+                        <span>📍</span>
+                        <span><strong>Rak Skripsi - Baris A (Kanan Atas)</strong></span>
+                        <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                    </a>
                 </div>
             </div>
-
+        </div>
+        
+        <!-- Item UMUM -->
+        <div class="catalog-item">
+            <h4>📊 UMUM</h4>
+            <p><strong>Fokus Penelitian:</strong> Penelitian di sekolah, analisis kesulitan belajar, pengembangan LKS, literasi numerasi, gaya belajar, problem based learning, dan studi kasus pembelajaran matematika.</p>
+            <p><strong>Total Skripsi:</strong> 50+ skripsi (2018-2025)</p>
+            <p><strong>Kode Koleksi:</strong> SKRIPSI/UM/...</p>
+            <div class="rak-info">
+                <span class="rak-badge-laboma">LABOMA</span>
+                <div class="rak-lokasi">
+                    <a href="https://docs.google.com/spreadsheets/d/1_UMUM_SKRIPSI_2025/edit?usp=sharing" target="_blank" style="text-decoration: none; color: #4a6cf7; display: flex; align-items: center; gap: 5px;">
+                        <span>📍</span>
+                        <span><strong>Rak Skripsi - Baris B (Kanan Bawah)</strong></span>
+                        <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Item KOMPUSTABEL -->
+        <div class="catalog-item">
+            <h4>💻 KOMPUSTABEL (Komputer dan Tabel)</h4>
+            <p><strong>Fokus Penelitian:</strong> Penggunaan software matematika (GeoGebra, SPSS, Excel), pemrograman, pengolahan data, dan media pembelajaran berbasis komputer.</p>
+            <p><strong>Total Skripsi:</strong> 30+ skripsi (2020-2025)</p>
+            <p><strong>Kode Koleksi:</strong> SKRIPSI/KOM/...</p>
+            <div class="rak-info">
+                <span class="rak-badge-laboma">LABOMA</span>
+                <div class="rak-lokasi">
+                    <a href="https://docs.google.com/spreadsheets/d/1_KOMPUSTABEL_SKRIPSI_2025/edit?usp=sharing" target="_blank" style="text-decoration: none; color: #4a6cf7; display: flex; align-items: center; gap: 5px;">
+                        <span>📍</span>
+                        <span><strong>Rak Skripsi - Baris C (Kiri Atas)</strong></span>
+                        <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- LINK KATALOG LENGKAP SEMUA SKRIPSI (OPSIONAL) -->
+    <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+        <h4 style="margin-bottom: 10px;">📋 Akses Semua Katalog Skripsi</h4>
+        <p style="margin-bottom: 15px; color: #5f6368;">Total 100+ skripsi dari semua kategori</p>
+        <a href="https://docs.google.com/spreadsheets/d/1_SEMUA_SKRIPSI_2025/edit?usp=sharing" class="btn-google" target="_blank" style="padding: 12px 30px;">
+            <i class="fab fa-google"></i> Buka Katalog Lengkap Skripsi
+        </a>
+    </div>
+</div>
             <!-- SECTION ARTIKEL -->
             <div id="artikel" class="section">
                 <div class="deskripsi-section">
