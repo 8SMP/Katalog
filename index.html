@@ -132,18 +132,20 @@
 
         .catalog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
             margin: 25px 0;
         }
 
         .catalog-item {
             background: white;
             border-radius: 10px;
-            padding: 20px;
+            padding: 25px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s;
             border: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
         }
 
         .catalog-item:hover {
@@ -153,47 +155,59 @@
 
         .catalog-item h4 {
             color: #4a6cf7;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-            line-height: 1.4;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
         }
 
         .catalog-item p {
-            color: #6c757d;
-            font-size: 0.9em;
-            margin-bottom: 8px;
+            color: #2c3e50;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            line-height: 1.5;
         }
 
-        .rak-info {
-            background: #f8f9ff;
-            padding: 10px;
-            border-radius: 8px;
-            margin-top: 12px;
-            border-left: 4px solid #4a6cf7;
-            font-size: 0.9em;
+        .catalog-item strong {
+            color: #4a6cf7;
         }
 
-        .rak-badge-laboma {
+        .badge-laboma {
             background: #4a6cf7;
             color: white;
-            padding: 3px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
-            font-size: 0.7em;
+            font-size: 0.8em;
             font-weight: bold;
             display: inline-block;
-            margin-right: 8px;
+            margin: 15px 0 10px 0;
+            align-self: flex-start;
         }
 
-        .rak-lokasi a {
+        .btn-link {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #4285F4;
+            color: white;
             text-decoration: none;
-            color: #4a6cf7;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: center;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95em;
         }
 
-        .rak-lokasi a:hover {
-            color: #2c3e50;
+        .btn-link:hover {
+            background: #3367D6;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
+        }
+
+        .btn-link i {
+            margin-right: 8px;
         }
 
         .btn-google {
@@ -216,26 +230,6 @@
             box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
         }
 
-        .btn-sheets {
-            background: #0F9D58;
-        }
-
-        .btn-sheets:hover {
-            background: #0B8043;
-        }
-
-        .btn-docs {
-            background: #4285F4;
-        }
-
-        .google-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 15px 0;
-        }
-
         footer {
             background: #343a40;
             color: white;
@@ -255,6 +249,10 @@
             
             .deskripsi-awal h2 {
                 font-size: 1.5em;
+            }
+            
+            .catalog-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -280,7 +278,7 @@
             <!-- DESKRIPSI AWAL -->
             <div class="deskripsi-awal">
                 <h2>📖 Selamat Datang di Katalog Pendidikan Matematika</h2>
-                <p>Website ini merupakan katalog online yang berisi koleksi skripsi, artikel ilmiah, buku ajar, dan alat peraga dari Program Studi Pendidikan Matematika, FKIP Universitas Jember. Setiap koleksi dilengkapi dengan informasi lokasi penyimpanan di Laboratorium Matematika (LABOMA). Klik pada lokasi rak untuk melihat daftar lengkap di Google Docs.</p>
+                <p>Website ini merupakan katalog online yang berisi koleksi skripsi, artikel ilmiah, buku ajar, dan alat peraga dari Program Studi Pendidikan Matematika, FKIP Universitas Jember. Setiap koleksi dilengkapi dengan link Google Docs untuk melihat daftar lengkap.</p>
                 <p style="margin-top: 15px; font-size: 0.9em;">Total koleksi: 700+ buku, 800+ skripsi, 350+ artikel, dan 150+ alat peraga.</p>
             </div>
 
@@ -296,8 +294,12 @@
                     <div class="catalog-item">
                         <h4>📊 Skripsi Umum</h4>
                         <p><strong>Fokus Penelitian:</strong> Game, puzzle (alat peraga), penelitian di sekolah, AKM, literasi numerasi, gaya belajar.</p>
-                        <p><strong>Total Skripsi:</strong> 100+ skripsi</p>
-                        <p><strong>Kode Koleksi:</strong> S ... ... U C1</p>
+                        <p><strong>Total Skripsi:</strong> 200+ skripsi</p>
+                        <p><strong>Kode Koleksi:</strong> S-UM-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Skripsi Umum
+                        </a>
                     </div>
                     
                     <!-- Item GEOMOBEL -->
@@ -305,15 +307,23 @@
                         <h4>📐 Skripsi Geomobel</h4>
                         <p><strong>Fokus Penelitian:</strong> Geometri, sudut, bangun ruang, bangun datar, etnomatematika.</p>
                         <p><strong>Total Skripsi:</strong> 200+ skripsi</p>
-                        <p><strong>Kode Koleksi:</strong> S ... ... G C1</p>
+                        <p><strong>Kode Koleksi:</strong> S-GM-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Skripsi Geomobel
+                        </a>
                     </div>
                     
                     <!-- Item MANABEL -->
                     <div class="catalog-item">
                         <h4>🧮 Skripsi Manabel</h4>
                         <p><strong>Fokus Penelitian:</strong> Aljabar, kalkulus, trigonometri, SPLDV, SPLTV, barisan, deret, turunan.</p>
-                        <p><strong>Total Skripsi:</strong> 2000+ skripsi</p>
-                        <p><strong>Kode Koleksi:</strong> S ... ... M C1</p>
+                        <p><strong>Total Skripsi:</strong> 200+ skripsi</p>
+                        <p><strong>Kode Koleksi:</strong> S-MN-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Skripsi Manabel
+                        </a>
                     </div>
                     
                     <!-- Item KOMPUSTABEL -->
@@ -321,7 +331,12 @@
                         <h4>💻 Skripsi Kompustabel</h4>
                         <p><strong>Fokus Penelitian:</strong> Statistika, peluang, kombinatorika, komputasi, aplikasi atau game, graf, pewarnaan pohon, media pembelajaran.</p>
                         <p><strong>Total Skripsi:</strong> 200+ skripsi</p>
-                        <p><strong>Kode Koleksi:</strong> S ... ... K C1</p>
+                        <p><strong>Kode Koleksi:</strong> S-KP-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Skripsi Kompustabel
+                        </a>
+                    </div>
                 </div>
                 
                 <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
@@ -333,84 +348,48 @@
                 </div>
             </div>
 
-            <!-- SECTION ARTIKEL -->
+            <!-- SECTION ARTIKEL (3 KATEGORI: GEOMOBEL, MANABEL, KOMPUSTABEL) -->
             <div id="artikel" class="section">
                 <div class="deskripsi-section">
                     <h3><i class="fas fa-newspaper"></i> Koleksi Artikel Ilmiah</h3>
-                    <p>Kumpulan artikel yang telah dipublikasikan di jurnal nasional dan internasional oleh dosen dan mahasiswa Pendidikan Matematika. Seluruh koleksi tersedia untuk dibaca di LABOMA.</p>
+                    <p>Kumpulan artikel yang telah dipublikasikan di jurnal nasional dan internasional oleh dosen dan mahasiswa Pendidikan Matematika.</p>
                 </div>
                 
                 <div class="catalog-grid">
-                    <!-- Item UMUM -->
-                    <div class="catalog-item">
-                        <h4>📊 Artikel Umum</h4>
-                        <p><strong>Fokus Penelitian:</strong> Pembelajaran matematika umum, literasi numerasi, pendidikan karakter, dan isu-isu pendidikan terkini.</p>
-                        <p><strong>Total Artikel:</strong> 25+ artikel (2020-2025)</p>
-                        <p><strong>Kode Koleksi:</strong> ART/UM/...</p>
-                        <div class="rak-info">
-                            <span class="rak-badge-laboma">LABOMA</span>
-                            <div class="rak-lokasi">
-                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
-                                    <span>📍</span>
-                                    <span><strong>Rak Jurnal - Baris A</strong></span>
-                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
                     <!-- Item GEOMOBEL -->
                     <div class="catalog-item">
-                        <h4>📐 Artikel Geomoble (Geometri Mobile)</h4>
-                        <p><strong>Fokus Penelitian:</strong> Pengembangan media geometri, augmented reality dalam pembelajaran, dan inovasi teknologi untuk geometri.</p>
-                        <p><strong>Total Artikel:</strong> 15+ artikel (2021-2025)</p>
-                        <p><strong>Kode Koleksi:</strong> ART/GM/...</p>
-                        <div class="rak-info">
-                            <span class="rak-badge-laboma">LABOMA</span>
-                            <div class="rak-lokasi">
-                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
-                                    <span>📍</span>
-                                    <span><strong>Rak Jurnal - Baris B</strong></span>
-                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <h4>📐 Artikel Geomobel</h4>
+                        <p><strong>Fokus Penelitian:</strong> Geometri, sudut, bangun ruang, bangun datar, etnomatematika.</p>
+                        <p><strong>Total Artikel:</strong> 120+ artikel</p>
+                        <p><strong>Kode Koleksi:</strong> A-GM-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Artikel Geomobel
+                        </a>
                     </div>
                     
                     <!-- Item MANABEL -->
                     <div class="catalog-item">
-                        <h4>🧮 Artikel Manabel (Matematika dan Aljabar)</h4>
-                        <p><strong>Fokus Penelitian:</strong> Kajian aljabar, kalkulus, analisis matematis, dan teori bilangan.</p>
-                        <p><strong>Total Artikel:</strong> 20+ artikel (2019-2025)</p>
-                        <p><strong>Kode Koleksi:</strong> ART/MN/...</p>
-                        <div class="rak-info">
-                            <span class="rak-badge-laboma">LABOMA</span>
-                            <div class="rak-lokasi">
-                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
-                                    <span>📍</span>
-                                    <span><strong>Rak Jurnal - Baris C</strong></span>
-                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <h4>🧮 Artikel Manabel</h4>
+                        <p><strong>Fokus Penelitian:</strong> Aljabar, kalkulus, trigonometri, SPLDV, SPLTV, barisan, deret, turunan.</p>
+                        <p><strong>Total Artikel:</strong> 130+ artikel</p>
+                        <p><strong>Kode Koleksi:</strong> A-MN-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Artikel Manabel
+                        </a>
                     </div>
                     
                     <!-- Item KOMPUSTABEL -->
                     <div class="catalog-item">
-                        <h4>💻 Artikel Kompustabel (Komputer dan Tabel)</h4>
-                        <p><strong>Fokus Penelitian:</strong> Software matematika, analisis data, statistik, dan pemrograman dalam pendidikan.</p>
-                        <p><strong>Total Artikel:</strong> 15+ artikel (2022-2025)</p>
-                        <p><strong>Kode Koleksi:</strong> ART/KOM/...</p>
-                        <div class="rak-info">
-                            <span class="rak-badge-laboma">LABOMA</span>
-                            <div class="rak-lokasi">
-                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
-                                    <span>📍</span>
-                                    <span><strong>Rak Jurnal - Baris D</strong></span>
-                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <h4>💻 Artikel Kompustabel</h4>
+                        <p><strong>Fokus Penelitian:</strong> Statistika, peluang, kombinatorika, komputasi, aplikasi atau game, graf, pewarnaan pohon, media pembelajaran.</p>
+                        <p><strong>Total Artikel:</strong> 100+ artikel</p>
+                        <p><strong>Kode Koleksi:</strong> A-KP-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Artikel Kompustabel
+                        </a>
                     </div>
                 </div>
             </div>
@@ -419,86 +398,62 @@
             <div id="buku" class="section">
                 <div class="deskripsi-section">
                     <h3><i class="fas fa-book"></i> Koleksi Buku Ajar</h3>
-                    <p>Total 400+ buku ajar dan referensi dari berbagai research group. Setiap buku tersedia untuk dibaca di LABOMA.</p>
+                    <p>Total 700+ buku ajar dan referensi dari berbagai research group.</p>
                 </div>
                 
                 <div class="catalog-grid">
                     <!-- Item UMUM -->
                     <div class="catalog-item">
-                        <h4>📚 Buku UMUM</h4>
-                        <p><strong>Fokus:</strong> Buku-buku umum pendidikan matematika, metodologi penelitian, evaluasi pembelajaran, dan pengembangan kurikulum.</p>
+                        <h4>📚 Buku Umum</h4>
+                        <p><strong>Fokus:</strong> Game, puzzle (alat peraga), penelitian di sekolah, AKM, literasi numerasi, gaya belajar.</p>
                         <p><strong>Total Buku:</strong> 200+ buku</p>
-                        <p><strong>Kode Koleksi:</strong> BUKU/UM/...</p>
-                        <div class="rak-info">
-                            <span class="rak-badge-laboma">LABOMA</span>
-                            <div class="rak-lokasi">
-                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
-                                    <span>📍</span>
-                                    <span><strong>Rak Buku - Baris A1</strong></span>
-                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <p><strong>Kode Koleksi:</strong> B-UM-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Buku Umum
+                        </a>
                     </div>
                     
                     <!-- Item GEOMOBEL -->
                     <div class="catalog-item">
-                        <h4>📐 Buku GEOMOBEL</h4>
-                        <p><strong>Fokus:</strong> Buku-buku geometri, geometri analitik, geometri transformasi, dan geometri ruang.</p>
-                        <p><strong>Total Buku:</strong> 25+ buku</p>
-                        <p><strong>Kode Koleksi:</strong> BUKU/GM/...</p>
-                        <div class="rak-info">
-                            <span class="rak-badge-laboma">LABOMA</span>
-                            <div class="rak-lokasi">
-                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
-                                    <span>📍</span>
-                                    <span><strong>Rak Buku - Baris B1</strong></span>
-                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <h4>📐 Buku Geomobel</h4>
+                        <p><strong>Fokus:</strong> Geometri, sudut, bangun ruang, bangun datar, etnomatematika.</p>
+                        <p><strong>Total Buku:</strong> 150+ buku</p>
+                        <p><strong>Kode Koleksi:</strong> B-GM-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Buku Geomobel
+                        </a>
                     </div>
                     
                     <!-- Item MANABEL -->
                     <div class="catalog-item">
-                        <h4>🧮 Buku MANABEL</h4>
-                        <p><strong>Fokus:</strong> Buku-buku tentang aljabar, kalkulus, analisis matematis, dan struktur aljabar.</p>
-                        <p><strong>Total Buku:</strong> 90+ buku</p>
-                        <p><strong>Kode Koleksi:</strong> BUKU/MN/...</p>
-                        <div class="rak-info">
-                            <span class="rak-badge-laboma">LABOMA</span>
-                            <div class="rak-lokasi">
-                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
-                                    <span>📍</span>
-                                    <span><strong>Rak Buku - Baris C1</strong></span>
-                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <h4>🧮 Buku Manabel</h4>
+                        <p><strong>Fokus:</strong> Aljabar, kalkulus, trigonometri, SPLDV, SPLTV, barisan, deret, turunan.</p>
+                        <p><strong>Total Buku:</strong> 180+ buku</p>
+                        <p><strong>Kode Koleksi:</strong> B-MN-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Buku Manabel
+                        </a>
                     </div>
                     
                     <!-- Item KOMPUSTABEL -->
                     <div class="catalog-item">
-                        <h4>💻 Buku KOMPUSTABEL</h4>
-                        <p><strong>Fokus:</strong> Buku-buku tentang komputer, pemrograman, statistika, metode numerik, dan software matematika.</p>
-                        <p><strong>Total Buku:</strong> 110+ buku</p>
-                        <p><strong>Kode Koleksi:</strong> BUKU/KOM/...</p>
-                        <div class="rak-info">
-                            <span class="rak-badge-laboma">LABOMA</span>
-                            <div class="rak-lokasi">
-                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
-                                    <span>📍</span>
-                                    <span><strong>Rak Buku - Baris D1</strong></span>
-                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <h4>💻 Buku Kompustabel</h4>
+                        <p><strong>Fokus:</strong> Statistika, peluang, kombinatorika, komputasi, aplikasi atau game, graf, pewarnaan pohon, media pembelajaran.</p>
+                        <p><strong>Total Buku:</strong> 170+ buku</p>
+                        <p><strong>Kode Koleksi:</strong> B-KP-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Buku Kompustabel
+                        </a>
                     </div>
                 </div>
                 
                 <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
-                    <h4 style="margin-bottom: 10px;">📋 Akses Semua Katalog Buku (400+ Buku)</h4>
-                    <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-google btn-docs" target="_blank" style="padding: 12px 30px;">
+                    <h4 style="margin-bottom: 10px;">📋 Akses Semua Katalog Buku (700+ Buku)</h4>
+                    <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-google" target="_blank" style="padding: 12px 30px;">
                         <i class="fab fa-google-drive"></i> Buka Katalog Lengkap Buku
                     </a>
                 </div>
@@ -508,80 +463,56 @@
             <div id="alatperaga" class="section">
                 <div class="deskripsi-section">
                     <h3><i class="fas fa-cubes"></i> Koleksi Alat Peraga</h3>
-                    <p>Alat peraga matematika hasil karya mahasiswa Program Studi Pendidikan Matematika. Tersedia untuk digunakan di LABOMA.</p>
+                    <p>Alat peraga matematika hasil karya mahasiswa Program Studi Pendidikan Matematika.</p>
                 </div>
                 
                 <div class="catalog-grid">
                     <!-- Item UMUM -->
                     <div class="catalog-item">
                         <h4>📦 Alat Peraga Umum</h4>
-                        <p><strong>Fokus:</strong> Alat peraga untuk pembelajaran umum seperti papan tulis, kartu bilangan, dan media pembelajaran sederhana.</p>
-                        <p><strong>Total Alat Peraga:</strong> 10+ alat</p>
-                        <p><strong>Kode Koleksi:</strong> AP/UM/...</p>
-                        <div class="rak-info">
-                            <span class="rak-badge-laboma">LABOMA</span>
-                            <div class="rak-lokasi">
-                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
-                                    <span>📍</span>
-                                    <span><strong>Rak AP - Laci 1-2</strong></span>
-                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <p><strong>Fokus:</strong> Game, puzzle (alat peraga), penelitian di sekolah, AKM, literasi numerasi, gaya belajar.</p>
+                        <p><strong>Total Alat Peraga:</strong> 40+ alat</p>
+                        <p><strong>Kode Koleksi:</strong> AP-UM-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Alat Peraga Umum
+                        </a>
                     </div>
                     
                     <!-- Item GEOMOBEL -->
                     <div class="catalog-item">
-                        <h4>📐 Alat Peraga Geometri</h4>
-                        <p><strong>Fokus:</strong> Alat peraga bangun ruang, bangun datar, jaring-jaring, dan model geometri 3D.</p>
-                        <p><strong>Total Alat Peraga:</strong> 8+ alat</p>
-                        <p><strong>Kode Koleksi:</strong> AP/GM/...</p>
-                        <div class="rak-info">
-                            <span class="rak-badge-laboma">LABOMA</span>
-                            <div class="rak-lokasi">
-                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
-                                    <span>📍</span>
-                                    <span><strong>Rak AP - Laci 3-4</strong></span>
-                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <h4>📐 Alat Peraga Geomobel</h4>
+                        <p><strong>Fokus:</strong> Geometri, sudut, bangun ruang, bangun datar, etnomatematika.</p>
+                        <p><strong>Total Alat Peraga:</strong> 35+ alat</p>
+                        <p><strong>Kode Koleksi:</strong> AP-GM-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Alat Peraga Geomobel
+                        </a>
                     </div>
                     
                     <!-- Item MANABEL -->
                     <div class="catalog-item">
-                        <h4>🧮 Alat Peraga Aljabar</h4>
-                        <p><strong>Fokus:</strong> Alat peraga untuk aljabar, seperti blok aljabar, timbangan bilangan, dan model persamaan.</p>
-                        <p><strong>Total Alat Peraga:</strong> 5+ alat</p>
-                        <p><strong>Kode Koleksi:</strong> AP/MN/...</p>
-                        <div class="rak-info">
-                            <span class="rak-badge-laboma">LABOMA</span>
-                            <div class="rak-lokasi">
-                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
-                                    <span>📍</span>
-                                    <span><strong>Rak AP - Laci 5</strong></span>
-                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <h4>🧮 Alat Peraga Manabel</h4>
+                        <p><strong>Fokus:</strong> Aljabar, kalkulus, trigonometri, SPLDV, SPLTV, barisan, deret, turunan.</p>
+                        <p><strong>Total Alat Peraga:</strong> 40+ alat</p>
+                        <p><strong>Kode Koleksi:</strong> AP-MN-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Alat Peraga Manabel
+                        </a>
                     </div>
                     
                     <!-- Item KOMPUSTABEL -->
                     <div class="catalog-item">
-                        <h4>💻 Alat Peraga Komputasi</h4>
-                        <p><strong>Fokus:</strong> Alat peraga berbasis komputer, simulasi digital, dan media interaktif.</p>
-                        <p><strong>Total Alat Peraga:</strong> 4+ alat</p>
-                        <p><strong>Kode Koleksi:</strong> AP/KOM/...</p>
-                        <div class="rak-info">
-                            <span class="rak-badge-laboma">LABOMA</span>
-                            <div class="rak-lokasi">
-                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
-                                    <span>📍</span>
-                                    <span><strong>Rak AP - Laci 6</strong></span>
-                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <h4>💻 Alat Peraga Kompustabel</h4>
+                        <p><strong>Fokus:</strong> Statistika, peluang, kombinatorika, komputasi, aplikasi atau game, graf, pewarnaan pohon, media pembelajaran.</p>
+                        <p><strong>Total Alat Peraga:</strong> 35+ alat</p>
+                        <p><strong>Kode Koleksi:</strong> AP-KP-C1</p>
+                        <span class="badge-laboma">LABOMA</span>
+                        <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-link" target="_blank">
+                            <i class="fab fa-google"></i> Lihat Katalog Alat Peraga Kompustabel
+                        </a>
                     </div>
                 </div>
             </div>
