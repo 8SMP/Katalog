@@ -130,113 +130,6 @@
             line-height: 1.6;
         }
 
-        .menu-utama {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .btn-menu {
-            padding: 12px 24px;
-            background: white;
-            border: 2px solid #4a6cf7;
-            border-radius: 8px;
-            color: #4a6cf7;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1em;
-        }
-
-        .btn-menu:hover, .btn-menu.active {
-            background: #4a6cf7;
-            color: white;
-        }
-
-        .sub-section {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .sub-section.active {
-            display: block;
-        }
-
-        .deskripsi-sub {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-            border-left: 4px solid #ff9800;
-        }
-
-        .deskripsi-sub h4 {
-            color: #e65100;
-            font-size: 1.3em;
-            margin-bottom: 8px;
-        }
-
-        .deskripsi-sub p {
-            color: #2c3e50;
-        }
-
-        .google-link-box {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            border: 1px solid #dadce0;
-            transition: all 0.3s;
-        }
-
-        .google-link-box:hover {
-            box-shadow: 0 5px 15px rgba(66, 133, 244, 0.2);
-        }
-
-        .btn-google {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #4285F4;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1em;
-        }
-
-        .btn-google:hover {
-            background: #3367D6;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
-        }
-
-        .btn-sheets {
-            background: #0F9D58;
-        }
-
-        .btn-sheets:hover {
-            background: #0B8043;
-        }
-
-        .btn-docs {
-            background: #4285F4;
-        }
-
-        .google-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 15px 0;
-        }
-
         .catalog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -291,12 +184,56 @@
             margin-right: 8px;
         }
 
-        .rak-lokasi {
+        .rak-lokasi a {
+            text-decoration: none;
+            color: #4a6cf7;
             display: flex;
             align-items: center;
             gap: 5px;
-            margin-top: 5px;
+        }
+
+        .rak-lokasi a:hover {
             color: #2c3e50;
+        }
+
+        .btn-google {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #4285F4;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .btn-google:hover {
+            background: #3367D6;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
+        }
+
+        .btn-sheets {
+            background: #0F9D58;
+        }
+
+        .btn-sheets:hover {
+            background: #0B8043;
+        }
+
+        .btn-docs {
+            background: #4285F4;
+        }
+
+        .google-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 15px 0;
         }
 
         footer {
@@ -343,83 +280,100 @@
             <!-- DESKRIPSI AWAL -->
             <div class="deskripsi-awal">
                 <h2>📖 Selamat Datang di Katalog Pendidikan Matematika</h2>
-                <p>Website ini merupakan katalog online yang berisi koleksi skripsi, artikel, buku, dan alat peraga dari Program Studi Pendidikan Matematika, FKIP Universitas Jember. Setiap koleksi dilengkapi dengan informasi singkat dan link akses ke Google Docs untuk melihat daftar lengkap.</p>
-                <p style="margin-top: 15px; font-size: 0.9em;">Total koleksi: 700+ buku, 800+ skripsi, 350+ artikel, dan 150+ alat peraga.</p>
+                <p>Website ini merupakan katalog online yang berisi koleksi skripsi, artikel ilmiah, buku ajar, dan alat peraga dari Program Studi Pendidikan Matematika, FKIP Universitas Jember. Setiap koleksi dilengkapi dengan informasi lokasi penyimpanan di Laboratorium Matematika (LABOMA). Klik pada lokasi rak untuk melihat daftar lengkap di Google Docs.</p>
+                <p style="margin-top: 15px; font-size: 0.9em;">Total koleksi: 400+ buku, 100+ skripsi, 50+ artikel, dan 20+ alat peraga.</p>
             </div>
 
-<!-- SECTION SKRIPSI -->
-<div id="skripsi" class="section">
-    <div class="deskripsi-section">
-        <h3><i class="fas fa-file-alt"></i> Koleksi Skripsi</h3>
-        <p>Berikut adalah katalog skripsi mahasiswa Pendidikan Matematika. Setiap skripsi hanya tersedia untuk dibaca di Laboratorium Matematika (LABOMA). Klik pada lokasi rak untuk melihat daftar lengkap di Google Docs.</p>
-    </div>
-    
-    <!-- KATALOG SKRIPSI -->
-    <div class="catalog-grid">
-        <!-- Item GEOMOBEL -->
-        <div class="catalog-item">
-            <h4>📐 GEOMOBEL (Geometri Mobile)</h4>
-            <p><strong>Fokus Penelitian:</strong> Pengembangan media pembelajaran geometri berbasis mobile, Augmented Reality, dan teknologi digital untuk meningkatkan pemahaman konsep geometri ruang.</p>
-            <p><strong>Total Skripsi:</strong> 25 skripsi (2019-2025)</p>
-            <p><strong>Kode Koleksi:</strong> SKRIPSI/GM/...</p>
-            <div class="rak-info">
-                <span class="rak-badge-laboma">LABOMA</span>
-                <div class="rak-lokasi">
-                    <a href="https://docs.google.com/spreadsheets/d/1_GEOMOBEL_SKRIPSI_2025/edit?usp=sharing" target="_blank" style="text-decoration: none; color: #4a6cf7; display: flex; align-items: center; gap: 5px;">
-                        <span>📍</span>
-                        <span><strong>Rak Skripsi - Baris A (Kanan Atas)</strong></span>
-                        <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+            <!-- SECTION SKRIPSI -->
+            <div id="skripsi" class="section">
+                <div class="deskripsi-section">
+                    <h3><i class="fas fa-file-alt"></i> Koleksi Skripsi</h3>
+                    <p>Berikut adalah katalog skripsi mahasiswa Pendidikan Matematika yang dikelompokkan berdasarkan fokus penelitian. Setiap skripsi hanya tersedia untuk dibaca di Laboratorium Matematika (LABOMA). Klik pada lokasi rak untuk melihat daftar lengkap di Google Docs.</p>
+                </div>
+                
+                <div class="catalog-grid">
+                    <!-- Item UMUM -->
+                    <div class="catalog-item">
+                        <h4>📊 Skripsi Umum</h4>
+                        <p><strong>Fokus Penelitian:</strong> Penelitian di sekolah, analisis kesulitan belajar, pengembangan LKS, literasi numerasi, gaya belajar, problem based learning, dan studi kasus pembelajaran matematika.</p>
+                        <p><strong>Total Skripsi:</strong> 50+ skripsi (2018-2025)</p>
+                        <p><strong>Kode Koleksi:</strong> SKRIPSI/UM/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak Skripsi - Baris B (Kanan Bawah)</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item GEOMOBEL -->
+                    <div class="catalog-item">
+                        <h4>📐 Skripsi Geomoble (Geometri Mobile)</h4>
+                        <p><strong>Fokus Penelitian:</strong> Pengembangan media pembelajaran geometri berbasis mobile, Augmented Reality, dan teknologi digital untuk meningkatkan pemahaman konsep geometri ruang.</p>
+                        <p><strong>Total Skripsi:</strong> 25 skripsi (2019-2025)</p>
+                        <p><strong>Kode Koleksi:</strong> SKRIPSI/GM/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak Skripsi - Baris A (Kanan Atas)</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item MANABEL -->
+                    <div class="catalog-item">
+                        <h4>🧮 Skripsi Manabel (Matematika dan Aljabar)</h4>
+                        <p><strong>Fokus Penelitian:</strong> Penelitian tentang aljabar, kalkulus, analisis, struktur aljabar, dan pengembangan konsep matematika lanjut.</p>
+                        <p><strong>Total Skripsi:</strong> 40+ skripsi (2018-2025)</p>
+                        <p><strong>Kode Koleksi:</strong> SKRIPSI/MN/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak Skripsi - Baris D (Kiri Bawah)</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item KOMPUSTABEL -->
+                    <div class="catalog-item">
+                        <h4>💻 Skripsi Kompustabel (Komputer dan Tabel)</h4>
+                        <p><strong>Fokus Penelitian:</strong> Penggunaan software matematika (GeoGebra, SPSS, Excel), pemrograman, pengolahan data, dan media pembelajaran berbasis komputer.</p>
+                        <p><strong>Total Skripsi:</strong> 30+ skripsi (2020-2025)</p>
+                        <p><strong>Kode Koleksi:</strong> SKRIPSI/KOM/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak Skripsi - Baris C (Kiri Atas)</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                    <h4 style="margin-bottom: 10px;">📋 Akses Semua Katalog Skripsi</h4>
+                    <p style="margin-bottom: 15px; color: #5f6368;">Total 100+ skripsi dari semua kategori</p>
+                    <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-google" target="_blank" style="padding: 12px 30px;">
+                        <i class="fab fa-google"></i> Buka Katalog Lengkap Skripsi
                     </a>
                 </div>
             </div>
-        </div>
-        
-        <!-- Item UMUM -->
-        <div class="catalog-item">
-            <h4>📊 UMUM</h4>
-            <p><strong>Fokus Penelitian:</strong> Penelitian di sekolah, analisis kesulitan belajar, pengembangan LKS, literasi numerasi, gaya belajar, problem based learning, dan studi kasus pembelajaran matematika.</p>
-            <p><strong>Total Skripsi:</strong> 50+ skripsi (2018-2025)</p>
-            <p><strong>Kode Koleksi:</strong> SKRIPSI/UM/...</p>
-            <div class="rak-info">
-                <span class="rak-badge-laboma">LABOMA</span>
-                <div class="rak-lokasi">
-                    <a href="https://docs.google.com/spreadsheets/d/1_UMUM_SKRIPSI_2025/edit?usp=sharing" target="_blank" style="text-decoration: none; color: #4a6cf7; display: flex; align-items: center; gap: 5px;">
-                        <span>📍</span>
-                        <span><strong>Rak Skripsi - Baris B (Kanan Bawah)</strong></span>
-                        <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Item KOMPUSTABEL -->
-        <div class="catalog-item">
-            <h4>💻 KOMPUSTABEL (Komputer dan Tabel)</h4>
-            <p><strong>Fokus Penelitian:</strong> Penggunaan software matematika (GeoGebra, SPSS, Excel), pemrograman, pengolahan data, dan media pembelajaran berbasis komputer.</p>
-            <p><strong>Total Skripsi:</strong> 30+ skripsi (2020-2025)</p>
-            <p><strong>Kode Koleksi:</strong> SKRIPSI/KOM/...</p>
-            <div class="rak-info">
-                <span class="rak-badge-laboma">LABOMA</span>
-                <div class="rak-lokasi">
-                    <a href="https://docs.google.com/spreadsheets/d/1_KOMPUSTABEL_SKRIPSI_2025/edit?usp=sharing" target="_blank" style="text-decoration: none; color: #4a6cf7; display: flex; align-items: center; gap: 5px;">
-                        <span>📍</span>
-                        <span><strong>Rak Skripsi - Baris C (Kiri Atas)</strong></span>
-                        <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- LINK KATALOG LENGKAP SEMUA SKRIPSI (OPSIONAL) -->
-    <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
-        <h4 style="margin-bottom: 10px;">📋 Akses Semua Katalog Skripsi</h4>
-        <p style="margin-bottom: 15px; color: #5f6368;">Total 100+ skripsi dari semua kategori</p>
-        <a href="https://docs.google.com/spreadsheets/d/1_SEMUA_SKRIPSI_2025/edit?usp=sharing" class="btn-google" target="_blank" style="padding: 12px 30px;">
-            <i class="fab fa-google"></i> Buka Katalog Lengkap Skripsi
-        </a>
-    </div>
-</div>
+
             <!-- SECTION ARTIKEL -->
             <div id="artikel" class="section">
                 <div class="deskripsi-section">
@@ -427,135 +381,75 @@
                     <p>Kumpulan artikel yang telah dipublikasikan di jurnal nasional dan internasional oleh dosen dan mahasiswa Pendidikan Matematika. Seluruh koleksi tersedia untuk dibaca di LABOMA.</p>
                 </div>
                 
-                <div class="menu-utama">
-                    <button class="btn-menu active" onclick="showSubSection('nasional')"><i class="fas fa-flag"></i> Nasional</button>
-                    <button class="btn-menu" onclick="showSubSection('internasional')"><i class="fas fa-globe"></i> Internasional</button>
-                    <button class="btn-menu" onclick="showSubSection('prosiding')"><i class="fas fa-microphone"></i> Prosiding</button>
-                </div>
-
-                <!-- Nasional -->
-                <div id="nasional" class="sub-section active">
-                    <div class="deskripsi-sub">
-                        <h4>🇮🇩 Artikel Jurnal Nasional</h4>
-                        <p>Artikel yang dipublikasikan di jurnal nasional terakreditasi. Koleksi lengkap dapat diakses melalui link Google berikut:</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Artikel Nasional</h4>
-                                <p style="color: #5f6368;">Total 30+ artikel. Update terakhir 2025.</p>
+                <div class="catalog-grid">
+                    <!-- Item UMUM -->
+                    <div class="catalog-item">
+                        <h4>📊 Artikel Umum</h4>
+                        <p><strong>Fokus Penelitian:</strong> Pembelajaran matematika umum, literasi numerasi, pendidikan karakter, dan isu-isu pendidikan terkini.</p>
+                        <p><strong>Total Artikel:</strong> 25+ artikel (2020-2025)</p>
+                        <p><strong>Kode Koleksi:</strong> ART/UM/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak Jurnal - Baris A</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
                             </div>
-                            <a href="#" class="btn-google btn-sheets" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
                         </div>
                     </div>
                     
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>Pembelajaran Daring Matematika di Era Pandemi</h4>
-                            <p><strong>Penulis:</strong> Tim Dosen</p>
-                            <p><strong>Jurnal:</strong> Jurnal Pendidikan Matematika</p>
-                            <p><strong>Tahun:</strong> 2023</p>
-                            <p><strong>Kode:</strong> ART/NAS/2023/012</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Jurnal Lantai 2 - Baris A</div>
+                    <!-- Item GEOMOBEL -->
+                    <div class="catalog-item">
+                        <h4>📐 Artikel Geomoble (Geometri Mobile)</h4>
+                        <p><strong>Fokus Penelitian:</strong> Pengembangan media geometri, augmented reality dalam pembelajaran, dan inovasi teknologi untuk geometri.</p>
+                        <p><strong>Total Artikel:</strong> 15+ artikel (2021-2025)</p>
+                        <p><strong>Kode Koleksi:</strong> ART/GM/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak Jurnal - Baris B</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
                             </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>Literasi Matematis Siswa SMA</h4>
-                            <p><strong>Penulis:</strong> Hadi Susanto, dkk</p>
-                            <p><strong>Jurnal:</strong> Jurnal Inovasi Pendidikan</p>
-                            <p><strong>Tahun:</strong> 2024</p>
-                            <p><strong>Kode:</strong> ART/NAS/2024/028</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Jurnal Lantai 2 - Baris A</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Internasional -->
-                <div id="internasional" class="sub-section">
-                    <div class="deskripsi-sub">
-                        <h4>🌍 Artikel Jurnal Internasional</h4>
-                        <p>Artikel yang dipublikasikan di jurnal internasional bereputasi. Koleksi lengkap dapat diakses melalui link Google berikut:</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Artikel Internasional</h4>
-                                <p style="color: #5f6368;">Total 15+ artikel. Update terakhir 2025.</p>
-                            </div>
-                            <a href="#" class="btn-google btn-sheets" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
                         </div>
                     </div>
                     
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>Ethnomathematics in Sundanese Culture</h4>
-                            <p><strong>Penulis:</strong> Lestari, M</p>
-                            <p><strong>Jurnal:</strong> International Journal of Education</p>
-                            <p><strong>Tahun:</strong> 2024</p>
-                            <p><strong>Kode:</strong> ART/INT/2024/005</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Jurnal Lantai 2 - Baris B</div>
+                    <!-- Item MANABEL -->
+                    <div class="catalog-item">
+                        <h4>🧮 Artikel Manabel (Matematika dan Aljabar)</h4>
+                        <p><strong>Fokus Penelitian:</strong> Kajian aljabar, kalkulus, analisis matematis, dan teori bilangan.</p>
+                        <p><strong>Total Artikel:</strong> 20+ artikel (2019-2025)</p>
+                        <p><strong>Kode Koleksi:</strong> ART/MN/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak Jurnal - Baris C</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
                             </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>Critical Thinking in Mathematics</h4>
-                            <p><strong>Penulis:</strong> Prof. Sunardi, dkk</p>
-                            <p><strong>Jurnal:</strong> Journal on Mathematics Education</p>
-                            <p><strong>Tahun:</strong> 2023</p>
-                            <p><strong>Kode:</strong> ART/INT/2023/012</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Jurnal Lantai 2 - Baris B</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Prosiding -->
-                <div id="prosiding" class="sub-section">
-                    <div class="deskripsi-sub">
-                        <h4>🎤 Prosiding Seminar</h4>
-                        <p>Kumpulan prosiding seminar nasional dan internasional. Koleksi lengkap dapat diakses melalui link Google berikut:</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Prosiding</h4>
-                                <p style="color: #5f6368;">Total 10+ prosiding. Update terakhir 2025.</p>
-                            </div>
-                            <a href="#" class="btn-google btn-sheets" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
                         </div>
                     </div>
                     
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>Prosiding Seminar Nasional Matematika 2024</h4>
-                            <p><strong>Editor:</strong> Dr. Hobri, M.Pd.</p>
-                            <p><strong>Tahun:</strong> 2024</p>
-                            <p><strong>Kode:</strong> PROS/2024/001</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Prosiding - Lantai 2</div>
+                    <!-- Item KOMPUSTABEL -->
+                    <div class="catalog-item">
+                        <h4>💻 Artikel Kompustabel (Komputer dan Tabel)</h4>
+                        <p><strong>Fokus Penelitian:</strong> Software matematika, analisis data, statistik, dan pemrograman dalam pendidikan.</p>
+                        <p><strong>Total Artikel:</strong> 15+ artikel (2022-2025)</p>
+                        <p><strong>Kode Koleksi:</strong> ART/KOM/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak Jurnal - Baris D</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -566,210 +460,87 @@
             <div id="buku" class="section">
                 <div class="deskripsi-section">
                     <h3><i class="fas fa-book"></i> Koleksi Buku Ajar</h3>
-                    <p>Total 400+ buku ajar dan referensi dari 4 Research Group (UMUM, GEOMOBEL, MANABEL, KOMPUSTABEL). Setiap buku tersedia untuk dibaca di LABOMA.</p>
+                    <p>Total 400+ buku ajar dan referensi dari berbagai research group. Setiap buku tersedia untuk dibaca di LABOMA.</p>
                 </div>
                 
-                <div class="menu-utama">
-                    <button class="btn-menu active" onclick="showSubSection('buku-umum')"><i class="fas fa-folder"></i> UMUM</button>
-                    <button class="btn-menu" onclick="showSubSection('buku-geomobel')"><i class="fas fa-cube"></i> GEOMOBEL</button>
-                    <button class="btn-menu" onclick="showSubSection('buku-manabel')"><i class="fas fa-superscript"></i> MANABEL</button>
-                    <button class="btn-menu" onclick="showSubSection('buku-kompustabel')"><i class="fas fa-laptop"></i> KOMPUSTABEL</button>
-                </div>
-
-                <!-- Buku UMUM -->
-                <div id="buku-umum" class="sub-section active">
-                    <div class="deskripsi-sub">
-                        <h4>📚 Research Group UMUM</h4>
-                        <p>Buku-buku umum pendidikan matematika, metodologi penelitian, dan pembelajaran. Total 200+ buku.</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Buku UMUM</h4>
-                                <p style="color: #5f6368;">Total 200+ buku. Update terakhir 2025.</p>
+                <div class="catalog-grid">
+                    <!-- Item UMUM -->
+                    <div class="catalog-item">
+                        <h4>📚 Buku UMUM</h4>
+                        <p><strong>Fokus:</strong> Buku-buku umum pendidikan matematika, metodologi penelitian, evaluasi pembelajaran, dan pengembangan kurikulum.</p>
+                        <p><strong>Total Buku:</strong> 200+ buku</p>
+                        <p><strong>Kode Koleksi:</strong> BUKU/UM/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak Buku - Baris A1</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
                             </div>
-                            <a href="#" class="btn-google btn-sheets" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
                         </div>
                     </div>
                     
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>Metode Penelitian Pendidikan</h4>
-                            <p><strong>Penulis:</strong> Prof. Dr. Sugiyono</p>
-                            <p><strong>Tahun:</strong> 2017</p>
-                            <p><strong>Kode:</strong> 370.717 370 00 012 01</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak UMUM - Baris A1</div>
+                    <!-- Item GEOMOBEL -->
+                    <div class="catalog-item">
+                        <h4>📐 Buku GEOMOBEL</h4>
+                        <p><strong>Fokus:</strong> Buku-buku geometri, geometri analitik, geometri transformasi, dan geometri ruang.</p>
+                        <p><strong>Total Buku:</strong> 25+ buku</p>
+                        <p><strong>Kode Koleksi:</strong> BUKU/GM/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak Buku - Baris B1</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
                             </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>Model-Model Pembelajaran Inovatif</h4>
-                            <p><strong>Penulis:</strong> Dr. H. Hobri, M.Pd.</p>
-                            <p><strong>Tahun:</strong> 2009</p>
-                            <p><strong>Kode:</strong> 1371.309 371 00 020 01</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak UMUM - Baris A2</div>
-                            </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>Dasar-Dasar Evaluasi Pendidikan</h4>
-                            <p><strong>Penulis:</strong> Prof. Suharsimi Arikunto</p>
-                            <p><strong>Tahun:</strong> 2013</p>
-                            <p><strong>Kode:</strong> 1371.213 371 00 122 01</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak UMUM - Baris B1</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Buku GEOMOBEL -->
-                <div id="buku-geomobel" class="sub-section">
-                    <div class="deskripsi-sub">
-                        <h4>📐 Research Group GEOMOBEL</h4>
-                        <p>Buku-buku geometri, geometri analitik, dan geometri transformasi. Total 25 buku.</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Buku GEOMOBEL</h4>
-                                <p style="color: #5f6368;">Total 25 buku. Update terakhir 2025.</p>
-                            </div>
-                            <a href="#" class="btn-google btn-sheets" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
                         </div>
                     </div>
                     
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>Geometri dan Pengukuran</h4>
-                            <p><strong>Penulis:</strong> Dr. Ir. Arita Marini</p>
-                            <p><strong>Tahun:</strong> 2013</p>
-                            <p><strong>Kode:</strong> 351613 516 01 001 03</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak GEOMOBEL - Baris A</div>
+                    <!-- Item MANABEL -->
+                    <div class="catalog-item">
+                        <h4>🧮 Buku MANABEL</h4>
+                        <p><strong>Fokus:</strong> Buku-buku tentang aljabar, kalkulus, analisis matematis, dan struktur aljabar.</p>
+                        <p><strong>Total Buku:</strong> 90+ buku</p>
+                        <p><strong>Kode Koleksi:</strong> BUKU/MN/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak Buku - Baris C1</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
                             </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>Geometri Analitik Ruang</h4>
-                            <p><strong>Penulis:</strong> Drs. Susanto, M.Pd.</p>
-                            <p><strong>Tahun:</strong> 2009</p>
-                            <p><strong>Kode:</strong> 151609 516 01 002 01</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak GEOMOBEL - Baris A</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Buku MANABEL -->
-                <div id="buku-manabel" class="sub-section">
-                    <div class="deskripsi-sub">
-                        <h4>🧮 Research Group MANABEL</h4>
-                        <p>Buku-buku tentang aljabar, kalkulus, dan analisis. Total 90+ buku.</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Buku MANABEL</h4>
-                                <p style="color: #5f6368;">Total 90+ buku. Update terakhir 2025.</p>
-                            </div>
-                            <a href="#" class="btn-google" style="background: #e74c3c;" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
                         </div>
                     </div>
                     
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>Teori dan Soal-Soal Peubah Kompleks</h4>
-                            <p><strong>Penulis:</strong> Murray R. Spiegel, Ph.D.</p>
-                            <p><strong>Kode:</strong> 1512- 512 02 001 01</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak MANABEL - Baris A</div>
-                            </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>Aljabar Linier</h4>
-                            <p><strong>Penulis:</strong> Drs. Maslen Sibarani</p>
-                            <p><strong>Tahun:</strong> 2013</p>
-                            <p><strong>Kode:</strong> 5512.513 512 02 002 05</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak MANABEL - Baris B</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Buku KOMPUSTABEL -->
-                <div id="buku-kompustabel" class="sub-section">
-                    <div class="deskripsi-sub">
-                        <h4>💻 Research Group KOMPUSTABEL</h4>
-                        <p>Buku-buku tentang komputer, pemrograman, dan statistika. Total 110+ buku.</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Buku KOMPUSTABEL</h4>
-                                <p style="color: #5f6368;">Total 110+ buku. Update terakhir 2025.</p>
-                            </div>
-                            <a href="#" class="btn-google" style="background: #f39c12;" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>Persamaan Diferensial</h4>
-                            <p><strong>Penulis:</strong> Marwan Said Munzir</p>
-                            <p><strong>Tahun:</strong> 2009</p>
-                            <p><strong>Kode:</strong> 151509 515 03 001 01</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak KOMPUSTABEL - Baris A</div>
-                            </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>Matematika Diskrit</h4>
-                            <p><strong>Penulis:</strong> Heri Purwanto, dkk</p>
-                            <p><strong>Tahun:</strong> 2006</p>
-                            <p><strong>Kode:</strong> 1451106 511 03 002 14</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak KOMPUSTABEL - Baris B</div>
+                    <!-- Item KOMPUSTABEL -->
+                    <div class="catalog-item">
+                        <h4>💻 Buku KOMPUSTABEL</h4>
+                        <p><strong>Fokus:</strong> Buku-buku tentang komputer, pemrograman, statistika, metode numerik, dan software matematika.</p>
+                        <p><strong>Total Buku:</strong> 110+ buku</p>
+                        <p><strong>Kode Koleksi:</strong> BUKU/KOM/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak Buku - Baris D1</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
-                    <h4 style="margin-bottom: 15px;">📚 Akses SEMUA Katalog Buku (400+ Buku)</h4>
-                    <a href="#" class="btn-google btn-docs" target="_blank" style="padding: 15px 30px; font-size: 1.1em;">
-                        <i class="fab fa-google-drive"></i> Buka Katalog Lengkap di Google Docs
+                    <h4 style="margin-bottom: 10px;">📋 Akses Semua Katalog Buku (400+ Buku)</h4>
+                    <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" class="btn-google btn-docs" target="_blank" style="padding: 12px 30px;">
+                        <i class="fab fa-google-drive"></i> Buka Katalog Lengkap Buku
                     </a>
                 </div>
             </div>
@@ -781,131 +552,75 @@
                     <p>Alat peraga matematika hasil karya mahasiswa Program Studi Pendidikan Matematika. Tersedia untuk digunakan di LABOMA.</p>
                 </div>
                 
-                <div class="menu-utama">
-                    <button class="btn-menu active" onclick="showSubSection('bangun-ruang')"><i class="fas fa-cube"></i> Bangun Ruang</button>
-                    <button class="btn-menu" onclick="showSubSection('bangun-datar')"><i class="fas fa-square"></i> Bangun Datar</button>
-                    <button class="btn-menu" onclick="showSubSection('trigonometri')"><i class="fas fa-chart-line"></i> Trigonometri</button>
-                </div>
-
-                <!-- Bangun Ruang -->
-                <div id="bangun-ruang" class="sub-section active">
-                    <div class="deskripsi-sub">
-                        <h4>🧊 Alat Peraga Bangun Ruang</h4>
-                        <p>Koleksi alat peraga untuk pembelajaran geometri ruang, kubus, balok, tabung, dan lain-lain.</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Alat Peraga</h4>
-                                <p style="color: #5f6368;">Total 20+ alat peraga. Update terakhir 2025.</p>
+                <div class="catalog-grid">
+                    <!-- Item UMUM -->
+                    <div class="catalog-item">
+                        <h4>📦 Alat Peraga Umum</h4>
+                        <p><strong>Fokus:</strong> Alat peraga untuk pembelajaran umum seperti papan tulis, kartu bilangan, dan media pembelajaran sederhana.</p>
+                        <p><strong>Total Alat Peraga:</strong> 10+ alat</p>
+                        <p><strong>Kode Koleksi:</strong> AP/UM/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak AP - Laci 1-2</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
                             </div>
-                            <a href="#" class="btn-google btn-sheets" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
                         </div>
                     </div>
                     
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>Kubus Satuan</h4>
-                            <p><strong>Pengembang:</strong> Kelompok 2</p>
-                            <p><strong>Tahun:</strong> 2023</p>
-                            <p><strong>Kode:</strong> AP/KUBUS/2023/008</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Alat Peraga - Laci 5</div>
+                    <!-- Item GEOMOBEL -->
+                    <div class="catalog-item">
+                        <h4>📐 Alat Peraga Geometri</h4>
+                        <p><strong>Fokus:</strong> Alat peraga bangun ruang, bangun datar, jaring-jaring, dan model geometri 3D.</p>
+                        <p><strong>Total Alat Peraga:</strong> 8+ alat</p>
+                        <p><strong>Kode Koleksi:</strong> AP/GM/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak AP - Laci 3-4</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
                             </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>Jaring-jaring Kubus</h4>
-                            <p><strong>Pengembang:</strong> Kelompok 4</p>
-                            <p><strong>Tahun:</strong> 2024</p>
-                            <p><strong>Kode:</strong> AP/JARING/2024/012</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Alat Peraga - Laci 5</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bangun Datar -->
-                <div id="bangun-datar" class="sub-section">
-                    <div class="deskripsi-sub">
-                        <h4>🔷 Alat Peraga Bangun Datar</h4>
-                        <p>Koleksi alat peraga untuk pembelajaran segitiga, segiempat, lingkaran, dan bangun datar lainnya.</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Alat Peraga Bangun Datar</h4>
-                                <p style="color: #5f6368;">Total 8 alat peraga.</p>
-                            </div>
-                            <a href="#" class="btn-google btn-sheets" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
                         </div>
                     </div>
                     
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>Papan Pythagoras</h4>
-                            <p><strong>Pengembang:</strong> Kelompok 1</p>
-                            <p><strong>Tahun:</strong> 2024</p>
-                            <p><strong>Kode:</strong> AP/PYTH/2024/001</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Alat Peraga - Laci 3</div>
+                    <!-- Item MANABEL -->
+                    <div class="catalog-item">
+                        <h4>🧮 Alat Peraga Aljabar</h4>
+                        <p><strong>Fokus:</strong> Alat peraga untuk aljabar, seperti blok aljabar, timbangan bilangan, dan model persamaan.</p>
+                        <p><strong>Total Alat Peraga:</strong> 5+ alat</p>
+                        <p><strong>Kode Koleksi:</strong> AP/MN/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak AP - Laci 5</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
                             </div>
-                        </div>
-                        
-                        <div class="catalog-item">
-                            <h4>Tangram</h4>
-                            <p><strong>Pengembang:</strong> Kelompok 3</p>
-                            <p><strong>Tahun:</strong> 2024</p>
-                            <p><strong>Kode:</strong> AP/TANGRAM/2024/005</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Alat Peraga - Laci 3</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Trigonometri -->
-                <div id="trigonometri" class="sub-section">
-                    <div class="deskripsi-sub">
-                        <h4>📐 Alat Peraga Trigonometri</h4>
-                        <p>Alat peraga untuk pembelajaran trigonometri, sudut istimewa, dan fungsi trigonometri.</p>
-                    </div>
-                    
-                    <div class="google-link-box">
-                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                            <i class="fab fa-google" style="font-size: 2.5em; color: #4285F4;"></i>
-                            <div style="flex: 1;">
-                                <h4 style="margin-bottom: 5px;">📋 Daftar Lengkap Alat Peraga Trigonometri</h4>
-                                <p style="color: #5f6368;">Total 5 alat peraga.</p>
-                            </div>
-                            <a href="#" class="btn-google btn-sheets" target="_blank">
-                                <i class="fab fa-google"></i> Buka Google Sheets
-                            </a>
                         </div>
                     </div>
                     
-                    <div class="catalog-grid">
-                        <div class="catalog-item">
-                            <h4>Lingkaran Satuan</h4>
-                            <p><strong>Pengembang:</strong> Kelompok 5</p>
-                            <p><strong>Tahun:</strong> 2024</p>
-                            <p><strong>Kode:</strong> AP/TRIG/2024/001</p>
-                            <div class="rak-info">
-                                <span class="rak-badge-laboma">LABOMA</span>
-                                <div class="rak-lokasi">📍 Rak Alat Peraga - Laci 7</div>
+                    <!-- Item KOMPUSTABEL -->
+                    <div class="catalog-item">
+                        <h4>💻 Alat Peraga Komputasi</h4>
+                        <p><strong>Fokus:</strong> Alat peraga berbasis komputer, simulasi digital, dan media interaktif.</p>
+                        <p><strong>Total Alat Peraga:</strong> 4+ alat</p>
+                        <p><strong>Kode Koleksi:</strong> AP/KOM/...</p>
+                        <div class="rak-info">
+                            <span class="rak-badge-laboma">LABOMA</span>
+                            <div class="rak-lokasi">
+                                <a href="https://docs.google.com/document/d/1vimxf0bXL10l3bxsnZ-kV-ERQ7DTgRCP/edit?usp=drive_link" target="_blank">
+                                    <span>📍</span>
+                                    <span><strong>Rak AP - Laci 6</strong></span>
+                                    <i class="fab fa-google" style="font-size: 0.9em; margin-left: 5px;"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -927,52 +642,12 @@
             
             document.getElementById(sectionId).classList.add('active');
             
-            if (sectionId === 'skripsi') {
-                document.getElementById('geomoble').classList.add('active');
-                document.querySelectorAll('#skripsi .btn-menu').forEach(function(btn) {
-                    btn.classList.remove('active');
-                });
-                document.querySelector('#skripsi .btn-menu:first-child').classList.add('active');
-            } else if (sectionId === 'artikel') {
-                document.getElementById('nasional').classList.add('active');
-                document.querySelectorAll('#artikel .btn-menu').forEach(function(btn) {
-                    btn.classList.remove('active');
-                });
-                document.querySelector('#artikel .btn-menu:first-child').classList.add('active');
-            } else if (sectionId === 'buku') {
-                document.getElementById('buku-umum').classList.add('active');
-                document.querySelectorAll('#buku .btn-menu').forEach(function(btn) {
-                    btn.classList.remove('active');
-                });
-                document.querySelector('#buku .btn-menu:first-child').classList.add('active');
-            } else if (sectionId === 'alatperaga') {
-                document.getElementById('bangun-ruang').classList.add('active');
-                document.querySelectorAll('#alatperaga .btn-menu').forEach(function(btn) {
-                    btn.classList.remove('active');
-                });
-                document.querySelector('#alatperaga .btn-menu:first-child').classList.add('active');
-            }
-            
             document.querySelectorAll('nav ul li a').forEach(function(link) {
                 link.style.background = 'none';
                 link.style.color = '#495057';
             });
             event.target.style.background = '#4a6cf7';
             event.target.style.color = 'white';
-        }
-
-        function showSubSection(subId) {
-            document.querySelectorAll('.sub-section').forEach(function(sub) {
-                sub.classList.remove('active');
-            });
-            
-            document.getElementById(subId).classList.add('active');
-            
-            var parentSection = document.getElementById(subId).closest('.section');
-            parentSection.querySelectorAll('.btn-menu').forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
         }
 
         window.onload = function() {
