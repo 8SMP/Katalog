@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog - Pendidikan Matematika</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6e8efb, #4a6cf7);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #495057;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #4a6cf7;
+            color: white;
+        }
+
+        .content {
+            padding: 40px;
+            min-height: 500px;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .sub-section {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .sub-section.active {
+            display: block;
+        }
+
+        .sub-section-2 {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            border-left: 4px solid #4a6cf7;
+        }
+
+        .sub-section-2.active {
+            display: block;
+        }
+
+        .menu-utama {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn-menu {
+            padding: 12px 24px;
+            background: white;
+            border: 2px solid #4a6cf7;
+            border-radius: 8px;
+            color: #4a6cf7;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-menu:hover, .btn-menu.active {
+            background: #4a6cf7;
+            color: white;
+        }
+
+        .btn-sub {
+            padding: 8px 16px;
+            background: #e9ecef;
+            border: none;
+            border-radius: 6px;
+            color: #495057;
+            font-weight: 500;
+            cursor: pointer;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+
+        .btn-sub:hover, .btn-sub.active {
+            background: #6e8efb;
+            color: white;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .catalog-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .catalog-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .catalog-item h4 {
+            color: #4a6cf7;
+            margin-bottom: 10px;
+        }
+
+        .catalog-item p {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+
+        .btn-download:hover {
+            background: #218838;
+        }
+
+        .description-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196f3;
+        }
+
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 KATALOG</h1>
+            <p>Pendidikan Matematika - Universitas Pendidikan Indonesia</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">Kelompok Mahasiswa Prodi Pendidikan Matematika</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('skripsi')">SKRIPSI</a></li>
+                <li><a href="#" onclick="showSection('artikel')">ARTIKEL</a></li>
+                <li><a href="#" onclick="showSection('buku')">BUKU</a></li>
+                <li><a href="#" onclick="showSection('alatperaga')">ALAT PERAGA</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <!-- SECTION SKRIPSI -->
+            <div id="skripsi" class="section">
+                <div class="description-box">
+                    <h3>📖 Koleksi Skripsi</h3>
+                    <p>Berikut adalah katalog skripsi mahasiswa Pendidikan Matematika yang telah dikelompokkan berdasarkan kategori. Setiap skripsi dilengkapi dengan abstrak dan file lengkap yang dapat diunduh.</p>
+                </div>
+                
+                <div class="menu-utama">
+                    <button class="btn-menu active" onclick="showSubSection('geomoble')">Geomoble</button>
+                    <button class="btn-menu" onclick="showSubSection('umum')">Umum</button>
+                    <button class="btn-menu" onclick="showSubSection('kompustabel')">Kompustabel</button>
+                </div>
+
+                <!-- Subbab Geomoble -->
+                <div id="geomoble" class="sub-section active">
+                    <div class="description-box">
+                        <h4>📐 Geomoble (Geometri Mobile)</h4>
+                        <p>Kategori ini berisi skripsi yang fokus pada pembelajaran geometri menggunakan media mobile dan teknologi augmented reality untuk meningkatkan pemahaman konsep geometri ruang.</p>
+                    </div>
+                    
+                    <div class="catalog-grid">
+                        <div class="catalog-item">
+                            <h4>Pengembangan Media Geomoble</h4>
+                            <p><strong>Penulis:</strong> Ahmad Fauzi</p>
+                            <p><strong>Tahun:</strong> 2024</p>
+                            <p>Mengembangkan aplikasi mobile untuk pembelajaran geometri ruang berbasis Android.</p>
+                            <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                        </div>
+                        
+                        <div class="catalog-item">
+                            <h4>AR untuk Bangun Ruang</h4>
+                            <p><strong>Penulis:</strong> Siti Nurhaliza</p>
+                            <p><strong>Tahun:</strong> 2023</p>
+                            <p>Implementasi Augmented Reality dalam pembelajaran bangun ruang sisi lengkung.</p>
+                            <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                        </div>
+                        
+                        <div class="catalog-item">
+                            <h4>Geomoble untuk SMP</h4>
+                            <p><strong>Penulis:</strong> Rudi Hermawan</p>
+                            <p><strong>Tahun:</strong> 2024</p>
+                            <p>Efektivitas penggunaan Geomoble terhadap hasil belajar geometri siswa SMP.</p>
+                            <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subbab Umum -->
+                <div id="umum" class="sub-section">
+                    <div class="description-box">
+                        <h4>📊 Skripsi Umum</h4>
+                        <p>Kategori ini berisi skripsi-skripsi dengan topik umum dalam pendidikan matematika, termasuk analisis pembelajaran, pengembangan bahan ajar, dan studi kasus di sekolah.</p>
+                    </div>
+                    
+                    <div class="catalog-grid">
+                        <div class="catalog-item">
+                            <h4>Analisis Kesulitan Belajar</h4>
+                            <p><strong>Penulis:</strong> Dewi Lestari</p>
+                            <p><strong>Tahun:</strong> 2023</p>
+                            <p>Analisis faktor-faktor penyebab kesulitan belajar matematika pada siswa SMA.</p>
+                            <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                        </div>
+                        
+                        <div class="catalog-item">
+                            <h4>Pengembangan LKS</h4>
+                            <p><strong>Penulis:</strong> Bambang Susilo</p>
+                            <p><strong>Tahun:</strong> 2024</p>
+                            <p>Pengembangan Lembar Kerja Siswa berbasis problem based learning.</p>
+                            <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subbab Kompustabel -->
+                <div id="kompustabel" class="sub-section">
+                    <div class="description-box">
+                        <h4>💻 Kompustabel (Komputer dan Tabel)</h4>
+                        <p>Kategori ini berisi skripsi yang membahas penggunaan komputer, software matematika, dan pengolahan data tabel dalam pembelajaran matematika.</p>
+                    </div>
+                    
+                    <div class="catalog-grid">
+                        <div class="catalog-item">
+                            <h4>GeoGebra untuk Kalkulus</h4>
+                            <p><strong>Penulis:</strong> Maya Sari</p>
+                            <p><strong>Tahun:</strong> 2023</p>
+                            <p>Pemanfaatan software GeoGebra dalam pembelajaran kalkulus di perguruan tinggi.</p>
+                            <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                        </div>
+                        
+                        <div class="catalog-item">
+                            <h4>SPSS dalam Statistika</h4>
+                            <p><strong>Penulis:</strong> Agus Pratama</p>
+                            <p><strong>Tahun:</strong> 2024</p>
+                            <p>Pembelajaran statistika berbantuan SPSS untuk meningkatkan analisis data.</p>
+                            <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                        </div>
+                        
+                        <div class="catalog-item">
+                            <h4>Excel untuk Matriks</h4>
+                            <p><strong>Penulis:</strong> Fitri Handayani</p>
+                            <p><strong>Tahun:</strong> 2023</p>
+                            <p>Penggunaan Microsoft Excel dalam pembelajaran operasi matriks.</p>
+                            <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION ARTIKEL -->
+            <div id="artikel" class="section">
+                <div class="description-box">
+                    <h3>📝 Koleksi Artikel Ilmiah</h3>
+                    <p>Kumpulan artikel ilmiah yang telah dipublikasikan di jurnal nasional dan internasional oleh mahasiswa dan dosen Pendidikan Matematika.</p>
+                </div>
+                
+                <div class="catalog-grid">
+                    <div class="catalog-item">
+                        <h4>Pembelajaran Daring Matematika</h4>
+                        <p><strong>Penulis:</strong> Tim Dosen</p>
+                        <p><strong>Jurnal:</strong> Jurnal Pendidikan Matematika</p>
+                        <p>Analisis efektivitas pembelajaran daring selama pandemi.</p>
+                        <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                    </div>
+                    
+                    <div class="catalog-item">
+                        <h4>Literasi Matematis Siswa</h4>
+                        <p><strong>Penulis:</strong> Hadi Susanto, dkk</p>
+                        <p><strong>Jurnal:</strong> Jurnal Inovasi Pendidikan</p>
+                        <p>Studi tentang tingkat literasi matematis siswa SMA di Jawa Barat.</p>
+                        <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                    </div>
+                    
+                    <div class="catalog-item">
+                        <h4>Etnomatematika</h4>
+                        <p><strong>Penulis:</strong> Lestari, M</p>
+                        <p><strong>Jurnal:</strong> International Journal of Education</p>
+                        <p>Eksplorasi konsep matematika pada budaya Sunda.</p>
+                        <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION BUKU -->
+            <div id="buku" class="section">
+                <div class="description-box">
+                    <h3>📚 Koleksi Buku Ajar</h3>
+                    <p>Buku-buku ajar dan referensi yang ditulis oleh dosen dan mahasiswa Pendidikan Matematika.</p>
+                </div>
+                
+                <div class="catalog-grid">
+                    <div class="catalog-item">
+                        <h4>Dasar-dasar Kalkulus</h4>
+                        <p><strong>Penulis:</strong> Prof. Dr. Ahmad Yani</p>
+                        <p><strong>ISBN:</strong> 978-602-1234-56-7</p>
+                        <p>Buku ajar kalkulus untuk mahasiswa pendidikan matematika.</p>
+                        <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                    </div>
+                    
+                    <div class="catalog-item">
+                        <h4>Statistika Pendidikan</h4>
+                        <p><strong>Penulis:</strong> Dr. Ratna Sari</p>
+                        <p><strong>ISBN:</strong> 978-602-1234-57-4</p>
+                        <p>Statistika terapan untuk penelitian pendidikan.</p>
+                        <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                    </div>
+                    
+                    <div class="catalog-item">
+                        <h4>Geometri Transformasi</h4>
+                        <p><strong>Penulis:</strong> Dr. Bambang Wijaya</p>
+                        <p><strong>ISBN:</strong> 978-602-1234-58-1</p>
+                        <p>Kajian mendalam tentang geometri transformasi.</p>
+                        <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION ALAT PERAGA -->
+            <div id="alatperaga" class="section">
+                <div class="description-box">
+                    <h3>🔧 Koleksi Alat Peraga</h3>
+                    <p>Katalog alat peraga matematika yang dikembangkan oleh mahasiswa untuk pembelajaran di sekolah.</p>
+                </div>
+                
+                <div class="catalog-grid">
+                    <div class="catalog-item">
+                        <h4>Papan Pythagoras</h4>
+                        <p><strong>Pengembang:</strong> Kelompok 1</p>
+                        <p><strong>Tahun:</strong> 2024</p>
+                        <p>Alat peraga untuk membuktikan teorema Pythagoras.</p>
+                        <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download Manual</a>
+                    </div>
+                    
+                    <div class="catalog-item">
+                        <h4>Kubus Satuan</h4>
+                        <p><strong>Pengembang:</strong> Kelompok 2</p>
+                        <p><strong>Tahun:</strong> 2023</p>
+                        <p>Alat peraga volume bangun ruang menggunakan kubus satuan.</p>
+                        <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download Manual</a>
+                    </div>
+                    
+                    <div class="catalog-item">
+                        <h4>Jaring-jaring Bangun Ruang</h4>
+                        <p><strong>Pengembang:</strong> Kelompok 3</p>
+                        <p><strong>Tahun:</strong> 2024</p>
+                        <p>Alat peraga jaring-jaring bangun ruang sisi datar.</p>
+                        <a href="#" class="btn-download" onclick="alert('File akan didownload')">📥 Download Manual</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2024 Katalog Pendidikan Matematika - Dibuat oleh Kelompok Mahasiswa Prodi Pendidikan Matematika</p>
+            <p style="margin-top: 10px; font-size: 0.8em;">Katalog Online berbasis GitHub Pages</p>
+        </footer>
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan section utama
+        function showSection(sectionId) {
+            // Sembunyikan semua section
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Tampilkan section yang dipilih
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Jika section yang dipilih adalah skripsi, tampilkan subbab default (geomoble)
+            if (sectionId === 'skripsi') {
+                showSubSection('geomoble');
+            }
+            
+            // Update active state di nav
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.style.background = 'none';
+                link.style.color = '#495057';
+            });
+            event.target.style.background = '#4a6cf7';
+            event.target.style.color = 'white';
+        }
+
+        // Fungsi untuk menampilkan subbab di dalam skripsi
+        function showSubSection(subId) {
+            // Sembunyikan semua sub-section
+            document.querySelectorAll('.sub-section').forEach(sub => {
+                sub.classList.remove('active');
+            });
+            
+            // Tampilkan sub-section yang dipilih
+            document.getElementById(subId).classList.add('active');
+            
+            // Update active state di button menu
+            document.querySelectorAll('.btn-menu').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Tampilkan section skripsi secara default saat halaman dimuat
+        window.onload = function() {
+            showSection('skripsi');
+        }
+    </script>
+</body>
+</html>
